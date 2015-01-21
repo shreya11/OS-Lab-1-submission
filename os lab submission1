@@ -1,0 +1,105 @@
+OS LINUX LAB- 1 ASSIGNMENT
+
+1.	Login as guest (password is guest123)
+sudo useradd guest
+sudo passwd guest
+
+2.	Find the present Directory
+pwd
+
+3.	Write the / directory structure
+ls
+
+4.	Write a few commands available in /bin and /sbin directory
+/bin: kill, cat, echo,pwd,chmod,less
+/sbin: ifconfig, init, reboot,netconfig,route,swapoff
+
+5.	Find the guest directory
+find / -name “guest”
+/home/guest
+
+6.	Write the permissions of guest directory
+ls -l
+     drwxr-xr-x
+
+7.	Create a new Directory test in guest directory
+sudo mkdir   /home/guest/test/
+
+8.	Write the permissions of test directory
+ls –l    /home/guest
+drwxrwxr-x
+
+9.	Copy the file /etc/resolv.conf in test directory
+sudo cp /etc/resolv.conf	/home/guest/test/
+
+10.	Rename the test directory to testing
+sudo mv /home/guest/test	/home/guest/testing
+
+11.	Delete the testing directory
+rm –r  /home/guest/testing
+
+12.	Change the permissions of guest directory to 775
+chmod     775     /home/guest
+
+13.	Change the permissions of /tmp directory to 700
+chmode    700    /tmp
+
+14.	Login as root user
+su root
+
+15.	Change the permissions of guest directory to 700
+chmod  700   /home/guest
+
+
+16.	The location of kernel files in Unix File System is /boot and by looking at the kernel file, write the kernel version you are using in your system.
+uname -v
+46-Ubuntu SMP
+
+17.	Login as guest
+su guest
+
+
+18.	Change directory to /
+cd /
+
+19.	List the contents of /home directory
+ls /home/guest/shreya
+
+20.	Find the group to which guest belongs
+guest
+
+21.	Create a file sidbi in the home area of guest (hint: use touch command)
+touch sidbi
+22.	Find the permissions of the file sidbi
+ls –l
+-rw-r--r—
+23.	Find the inode number of file sidbi (hint: ls –li)
+ls –li
+1317250
+24.	Copy the file sidbi to sidbi1
+sudo cp sidbi sidbi1
+25.	Find the inode number of file sidbi1 (hint: ls –li)
+ls -li
+1317253
+26.	Move the file sidbi to sidbi2
+mv sidbi sidbi2
+27.	Find the inode number of file sidbi2 (hint: ls –li)
+ls -li
+1317250
+
+28.	Move sidbi2 to sidbi
+mv sidbi2 sidbi
+
+
+29.	Login as root
+su root
+
+Create a new user guest1 with same group as guest (hint: use GUI tool ApplicationsSystem Settings Users and Groups)[More on this later in the course]
+Create a new user guest2 with a different group than the group of guest (hint: use GUI tool ApplicationsSystem Settings Users and Groups)
+Find, what permissions should the file sidbi have, so that both guest1 and guest2 can write into this file.
+664- change read permission to read and write permission
+
+Home work :  Linux installation  step by step . Prefer manual installation to get deep understanding.
+
+Guest login is presumed. Students may work in their individual logins.
+Step 29 to 32 are based on your student access rights policy. Otherwise it may be followed on your personal laptops.
